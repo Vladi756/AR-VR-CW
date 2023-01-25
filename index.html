@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+            <title>WebGL: Lesson 1</title>
+        </head>
+        <body>
+            <canvas id="canvas"></canvas>
+        </body>
+        <script type="text/javascript">
+            const canvas = document.querySelector("#c");
+            const gl = canvas.getContext('webgl');
+            if (!gl) {
+                console.log('WebGL unavailable');
+            } else {
+                console.log('WebGL is good to go');
+            }
+        </script>
+    </html>
