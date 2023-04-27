@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="a-fullscreen" foxified>
+    <head>
+        <title>LSBU Virtual Tour</title>
+        <script src="./aframe.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <video class="video" id="video1" src="./assets/placeholder.mp4"  autoplay loop crossorigin="anonymous"></video>
+                <video class="video" id="video2" src="./assets/placeholder2.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video3" src="./assets/placeholder3.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video4" src="./assets/placeholder4.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video5" src="./assets/placeholder5.mp4" loop crossorigin="anonymous"></video>
+            </a-assets>
+
+            <!-- SCENE 1 -->
+            <a-entity class="scene" id="scene1" visible="true">
+                <!-- Camera -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- 360 Video -->
+                <a-videosphere src="#video1"></a-videosphere>
+
+                <!--Play/Pause-->
+                <a-box id="videoControl" color="red" position="-5 1 -2" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
+                
+            </a-entity>
+
+            <!-- ============================================================================================================= -->
+
+            <!-- SCENE 2 -->
+            <a-entity class="scene" id="scene2" visible="false">
+                <!-- Camera -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- 360 Video -->
+                <a-videosphere src="#video2"></a-videosphere>
+
+                <!-- Play/Pause -->
+                <a-box id="videoControl" color="red" position="5 1 -2" scale="0.5 0.5 0.5" onclick="scene_2()"></a-box> 
+
+            </a-entity>
+
+            <!-- ============================================================================================================= -->
+
+            <!-- SCENE 3 -->
+            <a-entity class="scene" id="scene3" visible="false">
+                <!-- Camera -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- 360 Video -->
+                <a-videosphere src="#video3"></a-videosphere>
+
+                <!-- Play/Pause -->
+                <a-box id="videoControl" color="red" position="10 1 -2" scale="0.5 0.5 0.5" onclick="scene_3()"></a-box> 
+
+            </a-entity>
+
+            <!-- ============================================================================================================= -->
+
+
+            <!-- SCENE 4 -->
+            <a-entity class="scene" id="scene4" visible="false">
+                <!-- Camera -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- 360 Video -->
+                <a-videosphere src="#video4"></a-videosphere>
+
+                <!-- Play/Pause -->
+                <a-box id="videoControl" color="red" position="-10 1 -2" scale="0.5 0.5 0.5" onclick="scene_4()"></a-box> 
+
+            </a-entity>
+
+            <!-- ============================================================================================================= -->
+
+
+            <!-- SCENE 5 -->
+            <a-entity class="scene" id="scene5" visible="false">
+                <!-- Camera -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- 360 Video -->
+                <a-videosphere src="#video5"></a-videosphere>
+
+                <!-- Play/Pause -->
+                <a-box id="videoControl" color="red" position="0 1 -2" scale="0.5 0.5 0.5" onclick="scene_5()"></a-box> 
+
+            </a-entity>
+
+            <!-- ============================================================================================================= -->
+
+
+        <!-- SCRIPT -->
+
+        </a-scene>
+
+        <script type="text/javascript">
+
+            // ------------------------------------------------------------------------------ //
+            // Helper Functions // 
+
+            // stop video
+            function pauseVideo(){
+                document.querySelectorAll('.video').forEach(video => {
+                    video.pause();
+                })
+            }
+
+            // hide scenes
+            function hideScenes(){
+                document.querySelectorAll('.scene').forEach(scene => {
+                    scene.setAttribute('visible', 'false');
+                })
+            }
+
+            // ----------------------------------------------------------------------------- // 
+            // Change Scene Functions //
+
+            // change to scene 2
+            function scene_1(){
+                // pause + hide everything
+                pauseVideo();
+                hideScenes();
+
+                document.querySelector('#scene2').setAttribute('visible', 'true');
+
+                document.querySelector('#video2').play();
+            }
+
+             // change to scene 3
+             function scene_2(){
+                // pause + hide everything
+                pauseVideo();
+                hideScenes();
+
+                document.querySelector('#scene3').setAttribute('visible', 'true');
+
+                document.querySelector('#video3').play();
+            }
+
+            // change to scene 4
+            function scene_3(){
+                // pause + hide everything
+                pauseVideo();
+                hideScenes();
+
+                document.querySelector('#scene4').setAttribute('visible', 'true');
+
+                document.querySelector('#video4').play();
+            }
+
+            // change to scene 5
+            function scene_4(){
+                // pause + hide everything
+                pauseVideo();
+                hideScenes();
+
+                document.querySelector('#scene5').setAttribute('visible', 'true');
+
+                document.querySelector('#video5').play();
+            }
+
+            // change to scene 1
+            function scene_5(){
+                // pause + hide everything
+                pauseVideo();
+                hideScenes();
+
+                document.querySelector('#scene1').setAttribute('visible', 'true');
+
+                document.querySelector('#video1').play();
+            }
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html class="a-fullsceen" foxified>
+    <head>
+        <script src ="./aframe.js"></script>
+        <script src="./script.js" ></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </head>
+    <body>
+    <a-scene>
+        Asset Management System
+        <a-assets>
+            <video id="video1" src="./assets/placeholder2.mp4" autoplay></video>
+            <video id="video2" src="./assets/placeholder.mp4" autoplay></video>
+        </a-assets>
+        
+        Camera
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        
+        <a-entity>
+            <a-scene>
+                360 Video
+                <a-videosphere id="sphere" src="#video1" autoplay></a-videosphere>
+
+                <a-box color="black" position="2 3 5"><button onclick="changeSrc()"></button></a-box>
+                <a-box color="black" position="2 3 5" onclick="setScene2()"></a-box>
+            </a-scene>
+        </a-entity>
+    </a-scene>
+        </body>
+</html> -->
