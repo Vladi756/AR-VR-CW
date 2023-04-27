@@ -8,26 +8,20 @@
         <a-scene>
             <!-- Asset Management System -->
             <a-assets>
-                <video class="video" id="video1" src="./assets/0.mp4"  autoplay loop crossorigin="anonymous"></video>
-                <video class="video" id="video2" src="./assets/1.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video3" src="./assets/2.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video4" src="./assets/3.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video5" src="./assets/4.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video1" src="./assets/1.mp4"  autoplay loop crossorigin="anonymous"></video>
+                <video class="video" id="video2" src="./assets/2.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video3" src="./assets/3.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video4" src="./assets/4.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video5" src="./assets/5.mp4" loop crossorigin="anonymous"></video>
             </a-assets>
 
             <!-- SCENE 1 -->
             <a-entity class="scene" id="scene1" visible="true">
-                
-                <!-- Camera -->
-                <a-camera>
-                    <a-cursor></a-cursor>
-                </a-camera>
-                
                 <!-- 360 Video -->
                 <a-videosphere src="#video1"></a-videosphere>
 
                 <!--Play/Pause-->
-                <a-box id="videoControl" color="red" position="0 1 -4" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
+                <a-box color="red" position="-5 2 1" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
                 
             </a-entity>
 
@@ -35,16 +29,11 @@
 
             <!-- SCENE 2 -->
             <a-entity class="scene" id="scene2" visible="false">
-                <!-- Camera -->
-                <a-camera>
-                    <a-cursor></a-cursor>
-                </a-camera>
-
                 <!-- 360 Video -->
                 <a-videosphere src="#video2"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="0 1 4" scale="0.5 0.5 0.5" onclick="scene_2()"></a-box> 
+                <a-box color="red" position="-5 3 1" scale="0.5 0.5 0.5" onclick="scene_2()"></a-box> 
 
             </a-entity>
 
@@ -52,16 +41,11 @@
 
             <!-- SCENE 3 -->
             <a-entity class="scene" id="scene3" visible="false">
-                <!-- Camera -->
-                <a-camera">
-                    <a-cursor></a-cursor>
-                </a-camera>
-
                 <!-- 360 Video -->
                 <a-videosphere src="#video3"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="0 1 -3" scale="0.5 0.5 0.5" onclick="scene_3()"></a-box> 
+                <a-box color="red" position="-5 1 1" scale="0.5 0.5 0.5" onclick="scene_3()"></a-box> 
 
             </a-entity>
 
@@ -70,16 +54,11 @@
 
             <!-- SCENE 4 -->
             <a-entity class="scene" id="scene4" visible="false">
-                <!-- Camera -->
-                <a-camera>
-                    <a-cursor></a-cursor>
-                </a-camera>
-
                 <!-- 360 Video -->
                 <a-videosphere src="#video4"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="0 1 3" scale="0.5 0.5 0.5" onclick="scene_4()"></a-box> 
+                <a-box color="red" position="-5 0 3" scale="0.5 0.5 0.5" onclick="scene_4()"></a-box> 
 
             </a-entity>
 
@@ -88,20 +67,17 @@
 
             <!-- SCENE 5 -->
             <a-entity class="scene" id="scene5" visible="false">
-                <!-- Camera -->
-                <a-camera>
-                    <a-cursor></a-cursor>
-                </a-camera>
-
                 <!-- 360 Video -->
                 <a-videosphere src="#video5"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="0 1 -2" scale="0.5 0.5 0.5" onclick="scene_5()"></a-box> 
+                <a-box color="red" position="-5 -1 3" scale="0.5 0.5 0.5" onclick="scene_5()"></a-box> 
 
             </a-entity>
 
-
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
             <!-- ============================================================================================================= -->
 
         </a-scene>
