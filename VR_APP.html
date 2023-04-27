@@ -10,23 +10,24 @@
             <a-assets>
                 <video class="video" id="video1" src="./assets/placeholder.mp4"  autoplay loop crossorigin="anonymous"></video>
                 <video class="video" id="video2" src="./assets/placeholder2.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video3" src="./assets/placeholder3.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video3" src="assets\placeholder3.mp4" loop crossorigin="anonymous"></video>
                 <video class="video" id="video4" src="./assets/placeholder4.mp4" loop crossorigin="anonymous"></video>
                 <video class="video" id="video5" src="./assets/placeholder5.mp4" loop crossorigin="anonymous"></video>
             </a-assets>
 
             <!-- SCENE 1 -->
             <a-entity class="scene" id="scene1" visible="true">
+                
                 <!-- Camera -->
                 <a-camera>
                     <a-cursor></a-cursor>
                 </a-camera>
-
+                
                 <!-- 360 Video -->
                 <a-videosphere src="#video1"></a-videosphere>
 
                 <!--Play/Pause-->
-                <a-box id="videoControl" color="red" position="-5 1 -2" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
+                <a-box id="videoControl" color="red" position="0 1 -4" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
                 
             </a-entity>
 
@@ -43,7 +44,7 @@
                 <a-videosphere src="#video2"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="5 1 -2" scale="0.5 0.5 0.5" onclick="scene_2()"></a-box> 
+                <a-box id="videoControl" color="red" position="0 1 4" scale="0.5 0.5 0.5" onclick="scene_2()"></a-box> 
 
             </a-entity>
 
@@ -52,7 +53,7 @@
             <!-- SCENE 3 -->
             <a-entity class="scene" id="scene3" visible="false">
                 <!-- Camera -->
-                <a-camera>
+                <a-camera">
                     <a-cursor></a-cursor>
                 </a-camera>
 
@@ -60,7 +61,7 @@
                 <a-videosphere src="#video3"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="10 1 -2" scale="0.5 0.5 0.5" onclick="scene_3()"></a-box> 
+                <a-box id="videoControl" color="red" position="0 1 -3" scale="0.5 0.5 0.5" onclick="scene_3()"></a-box> 
 
             </a-entity>
 
@@ -78,7 +79,7 @@
                 <a-videosphere src="#video4"></a-videosphere>
 
                 <!-- Play/Pause -->
-                <a-box id="videoControl" color="red" position="-10 1 -2" scale="0.5 0.5 0.5" onclick="scene_4()"></a-box> 
+                <a-box id="videoControl" color="red" position="0 1 3" scale="0.5 0.5 0.5" onclick="scene_4()"></a-box> 
 
             </a-entity>
 
@@ -100,13 +101,13 @@
 
             </a-entity>
 
+
             <!-- ============================================================================================================= -->
 
 
         <!-- SCRIPT -->
 
         </a-scene>
-
         <script type="text/javascript">
 
             // ------------------------------------------------------------------------------ //
@@ -199,43 +200,3 @@
 
 
 
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html class="a-fullsceen" foxified>
-    <head>
-        <script src ="./aframe.js"></script>
-        <script src="./script.js" ></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    </head>
-    <body>
-    <a-scene>
-        Asset Management System
-        <a-assets>
-            <video id="video1" src="./assets/placeholder2.mp4" autoplay></video>
-            <video id="video2" src="./assets/placeholder.mp4" autoplay></video>
-        </a-assets>
-        
-        Camera
-        <a-camera>
-            <a-cursor></a-cursor>
-        </a-camera>
-        
-        <a-entity>
-            <a-scene>
-                360 Video
-                <a-videosphere id="sphere" src="#video1" autoplay></a-videosphere>
-
-                <a-box color="black" position="2 3 5"><button onclick="changeSrc()"></button></a-box>
-                <a-box color="black" position="2 3 5" onclick="setScene2()"></a-box>
-            </a-scene>
-        </a-entity>
-    </a-scene>
-        </body>
-</html> -->
