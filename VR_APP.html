@@ -34,7 +34,8 @@
                 <a-videosphere src="#video1"></a-videosphere>
 
                 <!-- Navigation Mechanism -->
-                <a-box color="red" position="-5 2 1" scale="0.5 0.5 0.5" onclick="scene_1()"></a-box>
+                <a-box color="red" position="-5 2 1" scale="0.5 0.5 0.5" onclick="scene_1()">
+                <a-text>Click here to go to the K2 building!</a-text></a-box>
                 
             </a-entity>
 
@@ -128,7 +129,16 @@
                 // Makes next scene visible
                 document.querySelector('#scene2').setAttribute('visible', 'true');
                 
-                document.querySelector('#video2').play();
+                var video = document.querySelector('#video2');
+
+                var isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+                                && video.readyState > video.HAVE_CURRENT_DATA;
+
+                if (!isPlaying) {
+                    video.play();
+                }
+
+                video.play();
             }
 
              // change to scene 3
@@ -139,8 +149,17 @@
 
                 // Makes next scene visible
                 document.querySelector('#scene3').setAttribute('visible', 'true');
-                // Plays the next video
-                document.querySelector('#video3').play();
+
+                var video = document.querySelector('#video3');
+
+                var isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+                                && video.readyState > video.HAVE_CURRENT_DATA;
+
+                if (!isPlaying) {
+                    video.play();
+                }
+
+                video.play();
             }
 
             // change to scene 4
@@ -151,8 +170,17 @@
 
                 // Makes next scene visible
                 document.querySelector('#scene4').setAttribute('visible', 'true');
-                // Plays the next video
-                document.querySelector('#video4').play();
+                
+                var video = document.querySelector('#video4');
+
+                var isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+                                && video.readyState > video.HAVE_CURRENT_DATA;
+
+                if (!isPlaying) {
+                    video.play();
+                }
+
+                video.play();
             }
 
             // change to scene 5
@@ -163,8 +191,17 @@
 
                 // Makes next scene visible
                 document.querySelector('#scene5').setAttribute('visible', 'true');
-                // Plays the next video
-                document.querySelector('#video5').play();
+                
+                var video = document.querySelector('#video5');
+
+                var isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+                                && video.readyState > video.HAVE_CURRENT_DATA;
+
+                if (!isPlaying) {
+                    video.play();
+                }
+
+                video.play();
             }
 
             // change to scene 1
@@ -175,8 +212,17 @@
 
                 // Makes next scene visible
                 document.querySelector('#scene1').setAttribute('visible', 'true');
-                // Plays the next video
-                document.querySelector('#video1').play();
+                
+                var video = document.querySelector('#video1');
+
+                var isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+                                && video.readyState > video.HAVE_CURRENT_DATA;
+
+                if (!isPlaying) {
+                    video.play();
+                }
+
+                video.play();
             }
 
         </script>
