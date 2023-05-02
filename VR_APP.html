@@ -8,11 +8,11 @@
         <a-scene>
             <!-- Asset Management System -->
             <a-assets>
-                <video class="video" id="video1" src= "./assets/1.mp4"  autoplay loop crossorigin="anonymous"></video>
-                <video class="video" id="video2" src= "./assets/2.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video3" src= "./assets/3.mp4" loop crossorigin="anonymous"></video>
-                <video class="video" id="video4" src= "./assets/4.mp4"loop crossorigin="anonymous"></video>
-                <video class="video" id="video5" src= "./assets/5.mp4" loop crossorigin="anonymous"></video>
+                <video class="video" id="video1" src= "./assets/1.mp4" autoplay loop crossorigin="anonymous"></video>
+                <video class="video" id="video2" src= "./assets/2.mp4" timeout="10000" loop crossorigin="anonymous"></video>
+                <video class="video" id="video3" src= "./assets/3.mp4" timeout="10000" loop crossorigin="anonymous"></video>
+                <video class="video" id="video4" src= "./assets/4.mp4" timeout="10000" loop crossorigin="anonymous"></video>
+                <video class="video" id="video5" src= "./assets/5.mp4" timeout="10000" loop crossorigin="anonymous"></video>
             </a-assets>
 
             <!-- SCENE 1 -->
@@ -114,8 +114,19 @@
 
                 // Makes next scene visible
                 document.querySelector('#scene2').setAttribute('visible', 'true');
-                // Plays the next video
+                
                 document.querySelector('#video2').play();
+                
+                // video.addEventListener("playing", function() {
+                //     copyVideo = true;
+                // }, true);
+                // video.addEventListener("ended", function() {
+                //     video.currentTime = 0;
+                //     video.play();   
+                // }, true);
+
+                // // Plays the next video
+                // video.play();
             }
 
              // change to scene 3
